@@ -13,6 +13,9 @@ public class FizzBuzzWhizz_v1 {
         if (isMultipleOf(i,7)){
             saying = saying + "Whizz";
         }
+        if (String.valueOf(i).contains("3")){
+            saying = saying + "Fizz";
+        }
         return saying.length() == 0 ? String.valueOf(1) : saying;
     }
 

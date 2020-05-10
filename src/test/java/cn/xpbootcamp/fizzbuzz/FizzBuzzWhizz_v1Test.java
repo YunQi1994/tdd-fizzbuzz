@@ -41,7 +41,7 @@ public class FizzBuzzWhizz_v1Test {
 
     @Test
     public void givenCountIsAMultipleOf7And5_whenCountOff_shouldReturnBuzzWhizz(){
-        String result = subject.countOff(35);
+        String result = subject.countOff(70);
         Assertions.assertThat(result).isEqualTo("BuzzWhizz");
     }
 
