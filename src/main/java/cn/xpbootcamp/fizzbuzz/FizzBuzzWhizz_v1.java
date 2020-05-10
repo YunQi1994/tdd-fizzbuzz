@@ -17,7 +17,7 @@ public class FizzBuzzWhizz_v1 {
             }
         }
 
-        if (doesContain(i,5)){
+        if (doesContain(i,5) && !doesContain(i,7)){
             if (isMultipleOf(i,5)){
                 saying = append(saying,"Buzz");
             }
