@@ -42,7 +42,7 @@ public class FizzBuzzWhizz_v1Test {
 
     @Test
     public void givenCountIsAMultipleOf7And5_whenCountOff_shouldReturnBuzzWhizz(){
-        String result = subject.countOff(70);
+        String result = subject.countOff(140);
         Assertions.assertThat(result).isEqualTo("BuzzWhizz");
     }
 
@@ -86,8 +86,8 @@ public class FizzBuzzWhizz_v1Test {
     public void numberGenerator(){
 
         for (int i = 1; i <= 20; i++){
-            int num = 105 * i;
-            if (!String.valueOf(num).contains("3") && !String.valueOf(num).contains("5") && String.valueOf(num).contains("7")){
+            int num = 35 * i;
+            if (!String.valueOf(num).contains("3") && !String.valueOf(num).contains("5") && !String.valueOf(num).contains("7")){
                 System.out.println(num);
                 break;
         }

@@ -6,7 +6,16 @@ public class FizzBuzzWhizz_v1 {
 
         String saying = "";
 
-        if (intToString(i).contains("5")){
+        if (doesContain(i,7)){
+            if (isMultipleOf(i,3)){
+                saying = append(saying,"Fizz");
+            }
+            if (isMultipleOf(i,7)){
+                saying = append(saying,"Whizz");
+            }
+        }
+
+        if (doesContain(i,5)){
             if (isMultipleOf(i,5)){
                 saying = append(saying,"Buzz");
             }
@@ -15,10 +24,10 @@ public class FizzBuzzWhizz_v1 {
             }
         }
 
-        if (intToString(i).contains("3") && !String.valueOf(i).contains("5")){
+        if (doesContain(i,3) && !doesContain(i,5)){
             saying = append(saying,"Fizz");
         }
-        if (!String.valueOf(i).contains("3") && !String.valueOf(i).contains("5")){
+        if (!doesContain(i,3) && !doesContain(i,5) && !doesContain(i,7)){
             if (isMultipleOf(i,3)){
                 saying = append(saying,"Fizz");
             }
@@ -41,11 +50,11 @@ public class FizzBuzzWhizz_v1 {
         return String.valueOf(i);
     }
 
-    private boolean isMultipleOf(int a, int b){
-        boolean result = false;
-        if (a%b == 0){
-            result = true;
-        }
-        return result;
+    private boolean doesContain(int count, int matcher){
+        return intToString(count).contains(intToString(matcher));
+    }
+
+    private boolean isMultipleOf(int count, int divider){
+        return count % divider == 0;
     }
 }
