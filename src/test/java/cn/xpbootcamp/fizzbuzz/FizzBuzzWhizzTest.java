@@ -2,12 +2,6 @@ package cn.xpbootcamp.fizzbuzz;
 
 import org.junit.Test;
 import org.assertj.core.api.Assertions;
-import org.mockito.InjectMocks;
-
-import java.util.List;
-
-import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.any;
 
 public class FizzBuzzWhizzTest {
 
