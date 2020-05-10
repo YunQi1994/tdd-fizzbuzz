@@ -10,11 +10,18 @@ public class FizzBuzzWhizz_v1 {
             if (isMultipleOf(i,3)){
                 saying = append(saying,"Fizz");
             }
-            if (!doesContain(i,3)){
+            if (doesContain(i,5)){
                 if (isMultipleOf(i,7)){
                     saying = append(saying,"Whizz");
                 }
+            }else {
+                if (!doesContain(i,3)){
+                    if (isMultipleOf(i,7)){
+                        saying = append(saying,"Whizz");
+                    }
+                }
             }
+
         }
 
         if (doesContain(i,5) && !doesContain(i,7)){
