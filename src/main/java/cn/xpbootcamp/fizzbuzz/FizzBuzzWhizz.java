@@ -13,7 +13,7 @@ public class FizzBuzzWhizz {
         if (isMultipleOf(i,7)){
             saying = saying + "Whizz";
         }
-        return saying;
+        return saying.length() == 0 ? String.valueOf(1) : saying;
     }
 
     private boolean isMultipleOf(int a, int b){

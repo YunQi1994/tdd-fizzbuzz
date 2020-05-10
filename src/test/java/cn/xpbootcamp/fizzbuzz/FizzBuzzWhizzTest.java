@@ -48,4 +48,11 @@ public class FizzBuzzWhizzTest {
         String result = subject.countOff(105);
         Assertions.assertThat(result).isEqualTo("FizzBuzzWhizz");
     }
+
+    @Test
+    public void givenCountIsNotMultipleOf3_Or_5_Or_7_whenCountOff_shouldReturnCount(){
+        String result = subject.countOff(1);
+        Assertions.assertThat(result).isEqualTo("1");
+    }
+
 }
