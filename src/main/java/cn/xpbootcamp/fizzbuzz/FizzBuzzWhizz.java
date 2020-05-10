@@ -1,5 +1,8 @@
 package cn.xpbootcamp.fizzbuzz;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzzWhizz {
     private static boolean isMatch = false;
 
@@ -54,5 +57,19 @@ public class FizzBuzzWhizz {
             isMatch = true;
         }
         return isMatch;
+    }
+
+    public String countOff(int i) {
+        String output = "";
+        if (i%3 == 0){
+            output = output + "Fizz";
+        }
+        if (i%5 == 0){
+            output = output + "Buzz";
+        }
+        if (i%7 == 0){
+            output = output + "Whizz";
+        }
+        return output;
     }
 }
