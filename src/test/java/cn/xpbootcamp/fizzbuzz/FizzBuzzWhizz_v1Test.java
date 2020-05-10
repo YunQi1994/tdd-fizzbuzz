@@ -83,17 +83,29 @@ public class FizzBuzzWhizz_v1Test {
     }
 
     @Test
-    public void givenCountContains7and3_AlsoIsMultipleOf3and5and7_whenCountOff_shouldReturnFizzWhizz(){
+    public void givenCountContains7and3_AlsoIsMultipleOf3and5and7_whenCountOff_shouldReturnFizz(){
         String result = subject.countOff(2730);
         Assertions.assertThat(result).isEqualTo("Fizz");
     }
 
     @Test
+    public void givenCountContains7and3_AlsoIsMultipleOf5and7_whenCountOff_shouldReturnFizz(){
+        String result = subject.countOff(3710);
+        Assertions.assertThat(result).isEqualTo("3710");
+    }
+
+//    @Test
+//    public void givenCountContains7and5_AlsoIsMultipleOf3and5and7_whenCountOff_shouldReturnFizzWhizz(){
+//        String result = subject.countOff(2730);
+//        Assertions.assertThat(result).isEqualTo("Fizz");
+//    }
+
+    @Test
     public void numberGenerator(){
 
-        for (int i = 1; i <= 100; i++){
-            int num = 105 * i;
-            if (String.valueOf(num).contains("3") && !String.valueOf(num).contains("5") && String.valueOf(num).contains("7")){
+        for (int i = 1; i <= 1000; i++){
+            int num = 35 * i;
+            if (String.valueOf(num).contains("3") && !String.valueOf(num).contains("5") && String.valueOf(num).contains("7") && num % 3 != 0){
                 System.out.println(num);
                 break;
         }
