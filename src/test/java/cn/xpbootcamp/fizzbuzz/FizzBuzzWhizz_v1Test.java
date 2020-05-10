@@ -1,5 +1,6 @@
 package cn.xpbootcamp.fizzbuzz;
 
+import jdk.nashorn.internal.objects.annotations.Function;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
@@ -29,7 +30,7 @@ public class FizzBuzzWhizz_v1Test {
 
     @Test
     public void givenCountIsAMultipleOf3And5_whenCountOff_shouldReturnFizzBuzz(){
-        String result = subject.countOff(15);
+        String result = subject.countOff(60);
         Assertions.assertThat(result).isEqualTo("FizzBuzz");
     }
 
@@ -47,7 +48,7 @@ public class FizzBuzzWhizz_v1Test {
 
     @Test
     public void givenCountIsAMultipleOf3And5ANd7_whenCountOff_shouldReturnFizzBuzzWhizz() {
-        String result = subject.countOff(105);
+        String result = subject.countOff(210);
         Assertions.assertThat(result).isEqualTo("FizzBuzzWhizz");
     }
 
@@ -65,8 +66,27 @@ public class FizzBuzzWhizz_v1Test {
 
     @Test
     public void givenCountContains3_AlsoIsMultipleOf3and5and7_whenCountOff_shouldReturnFizz(){
-        String result = subject.countOff(315);
+        String result = subject.countOff(630);
         Assertions.assertThat(result).isEqualTo("Fizz");
+    }
+
+    @Test
+    public void givenCountContains5_AlsoIsMultipleOf3and5and7_whenCountOff_shouldReturnFizz(){
+        String result = subject.countOff(315);
+        Assertions.assertThat(result).isEqualTo("BuzzWhizz");
+    }
+
+    @Test
+    public void numberGenerator(){
+
+        for (int i = 1; i <= 20; i++){
+            int num = 105 * i;
+            if (!String.valueOf(num).contains("3") && !String.valueOf(num).contains("5") && !String.valueOf(num).contains("7")){
+                System.out.println(num);
+                break;
+        }
+        }
+
     }
 
 
