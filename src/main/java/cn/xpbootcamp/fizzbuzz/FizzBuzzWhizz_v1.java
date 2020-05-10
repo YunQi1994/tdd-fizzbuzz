@@ -4,19 +4,24 @@ public class FizzBuzzWhizz_v1 {
 
     public String countOff(int i) {
         String saying = "";
+        if (String.valueOf(i).contains("3")){
+            saying = append(saying,"Fizz");
+        }
         if (isMultipleOf(i,3)){
-            saying = saying + "Fizz";
+            saying = append(saying,"Fizz");
         }
         if (isMultipleOf(i,5)){
-            saying = saying + "Buzz";
+            saying = append(saying,"Buzz");
         }
         if (isMultipleOf(i,7)){
-            saying = saying + "Whizz";
+            saying = append(saying,"Whizz");
         }
-        if (String.valueOf(i).contains("3")){
-            saying = saying + "Fizz";
-        }
+
         return saying.length() == 0 ? String.valueOf(1) : saying;
+    }
+
+    private String append(String str, String appending){
+        return str + appending;
     }
 
     private boolean isMultipleOf(int a, int b){

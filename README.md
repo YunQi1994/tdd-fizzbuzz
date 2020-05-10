@@ -19,3 +19,6 @@
 
 ## tasking
 
+
+## questions
+1. 在小步实现时，如何refactor以及refactor的强度
