@@ -7,14 +7,16 @@ public class FizzBuzzWhizz_v1 {
         if (String.valueOf(i).contains("3")){
             saying = append(saying,"Fizz");
         }
-        if (isMultipleOf(i,3)){
-            saying = append(saying,"Fizz");
-        }
-        if (isMultipleOf(i,5)){
-            saying = append(saying,"Buzz");
-        }
-        if (isMultipleOf(i,7)){
-            saying = append(saying,"Whizz");
+        else {
+            if (isMultipleOf(i,3)){
+                saying = append(saying,"Fizz");
+            }
+            if (isMultipleOf(i,5)){
+                saying = append(saying,"Buzz");
+            }
+            if (isMultipleOf(i,7)){
+                saying = append(saying,"Whizz");
+            }
         }
 
         return saying.length() == 0 ? String.valueOf(1) : saying;

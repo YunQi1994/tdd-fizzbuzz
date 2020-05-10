@@ -63,6 +63,11 @@ public class FizzBuzzWhizz_v1Test {
         Assertions.assertThat(result).isEqualTo("Fizz");
     }
 
+    @Test
+    public void givenCountContains3_AlsoIsMultipleOf3and5and7_whenCountOff_shouldReturnFizz(){
+        String result = subject.countOff(315);
+        Assertions.assertThat(result).isEqualTo("Fizz");
+    }
 
 
 
