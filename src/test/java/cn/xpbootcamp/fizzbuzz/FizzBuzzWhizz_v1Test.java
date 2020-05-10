@@ -94,11 +94,11 @@ public class FizzBuzzWhizz_v1Test {
         Assertions.assertThat(result).isEqualTo("3710");
     }
 
-//    @Test
-//    public void givenCountContains7and5_AlsoIsMultipleOf3and5and7_whenCountOff_shouldReturnFizzWhizz(){
-//        String result = subject.countOff(2730);
-//        Assertions.assertThat(result).isEqualTo("Fizz");
-//    }
+    @Test
+    public void givenCountContains7and5_AlsoIsMultipleOf3and5and7_whenCountOff_shouldReturnFizzWhizz(){
+        String result = subject.countOff(0);
+        Assertions.assertThat(result).isEqualTo("FizzWhizz");
+    }
 
     @Test
     public void numberGenerator(){

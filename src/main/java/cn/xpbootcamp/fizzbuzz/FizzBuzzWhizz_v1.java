@@ -41,7 +41,7 @@ public class FizzBuzzWhizz_v1 {
             }
         }
 
-        return saying.length() == 0 ? String.valueOf(1) : saying;
+        return saying.length() == 0 ? String.valueOf(i) : saying;
     }
 
     private String append(String str, String appending){
