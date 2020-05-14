@@ -3,24 +3,20 @@ package cn.xpbootcamp.fizzbuzz;
 public class FizzBuzzWhizz {
 
     public String countOff(int i) {
-        String saying = "";
-        if (isMultipleOf(i,3)){
-            saying = saying + "Fizz";
+        CurrentStudent student = new CurrentStudent(i);
+        if (student.numberContains(3) && !student.numberContains(5)) {
+            return "Fizz";
         }
-        if (isMultipleOf(i,5)){
-            saying = saying + "Buzz";
+        if (student.dividedBy(3) && (!student.numberContains(5) || student.numberContains(7))) {
+            student.append("Fizz");
         }
-        if (isMultipleOf(i,7)){
-            saying = saying + "Whizz";
+        if (student.dividedBy(5) && !student.numberContains(7)) {
+            student.append("Buzz");
         }
-        return saying.length() == 0 ? String.valueOf(1) : saying;
+        if (student.dividedBy(7)) {
+            student.append("Whizz");
+        }
+        return student.sayNumber() ? student.toString() : student.sayWords();
     }
 
-    private boolean isMultipleOf(int a, int b){
-        boolean result = false;
-        if (a%b == 0){
-            result = true;
-        }
-        return result;
-    }
 }
