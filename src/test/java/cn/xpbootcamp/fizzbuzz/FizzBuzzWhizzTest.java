@@ -4,6 +4,10 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.assertj.core.api.Assertions;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class FizzBuzzWhizzTest {
 
     private FizzBuzzWhizz subject = new FizzBuzzWhizz();
@@ -104,19 +108,6 @@ public class FizzBuzzWhizzTest {
         Assertions.assertThat(result).isEqualTo("FizzWhizz");
     }
 
-    @Test
-    public void should_return_true_given_13_when_check_contain(){
-        CurrentStudent currentStudent = new CurrentStudent(13);
-        boolean result = currentStudent.numberContains(3);
-        Assert.assertTrue(result);
-    }
-
-    @Test
-    public void should_return_true_given_15_when_module_5(){
-        CurrentStudent currentStudent = new CurrentStudent(15);
-        boolean result = currentStudent.dividedBy(5);
-        Assert.assertTrue(result);
-    }
 
 
 
@@ -128,6 +119,21 @@ public class FizzBuzzWhizzTest {
                 System.out.println(num);
                 break;
             }
+        }
+    }
+
+    @Test
+    public void fizzBuzz_whenInputAllValue_shouldPass() throws IOException {
+        String fileName = this.getClass().getClassLoader().getResource("input.txt").getPath();
+
+        BufferedReader input = new BufferedReader(new FileReader(fileName));
+        String line = null;
+        int index = 0;
+        while ((line = input.readLine()) != null) {
+            line = line.replaceAll("\"", "");
+            String[] arrays = line.split(",");
+            System.out.println(++index + " Processing line:" + line);
+            Assert.assertEquals(subject.countOff(Integer.valueOf(arrays[0])), arrays[1].trim());
         }
     }
 

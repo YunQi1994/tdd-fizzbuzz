@@ -2,21 +2,21 @@ package cn.xpbootcamp.fizzbuzz;
 
 public class FizzBuzzWhizz {
 
-    public String countOff(int i) {
-        CurrentStudent student = new CurrentStudent(i);
-        if (student.numberContains(3) && !student.numberContains(5)) {
+    public String countOff(int number) {
+        CountNumber countNumber = new CountNumber(number);
+        if (countNumber.contains(3) && !countNumber.contains(5)) {
             return "Fizz";
         }
-        if (student.dividedBy(3) && (!student.numberContains(5) || student.numberContains(7))) {
-            student.append("Fizz");
+        if (countNumber.dividedBy(3) && (!countNumber.contains(5) || countNumber.contains(7))) {
+            countNumber.append("Fizz");
         }
-        if (student.dividedBy(5) && !student.numberContains(7)) {
-            student.append("Buzz");
+        if (countNumber.dividedBy(5) && !countNumber.contains(7)) {
+            countNumber.append("Buzz");
         }
-        if (student.dividedBy(7)) {
-            student.append("Whizz");
+        if (countNumber.dividedBy(7)) {
+            countNumber.append("Whizz");
         }
-        return student.sayNumber() ? student.toString() : student.sayWords();
+        return countNumber.display();
     }
 
 }
