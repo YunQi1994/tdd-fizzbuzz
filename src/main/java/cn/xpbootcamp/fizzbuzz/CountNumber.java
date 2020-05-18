@@ -16,23 +16,11 @@ public class CountNumber {
         return currentNumber % num == 0;
     }
 
-    public String getCurrentNumber() {
-        return String.valueOf(currentNumber);
-    }
-
     public void append(String str) {
         outputString += str;
     }
 
     public String display(){
         return outputString.isEmpty() ? String.valueOf(currentNumber) : outputString;
-    }
-
-    public boolean sayNumber(){
-        return outputString.length() == 0;
-    }
-
-    public String sayWords() {
-        return this.outputString;
     }
 }
